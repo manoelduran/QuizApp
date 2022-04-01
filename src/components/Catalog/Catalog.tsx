@@ -1,17 +1,14 @@
 import React from "react";
 import {
-    Container,
-    Text
+Container, Text
 } from './styles';
 
-const Home: React.FC = () => {
-
-
+const Catalog: React.FC = () => {
     return (
         <Container>
-            <Text>ola</Text>
+            <Text>CATALOGO</Text>
         </Container>
     );
 };
 
-export { Home };
+export default Catalog;
