@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { View } from "react-native";
 import { useSelector, useStore } from "react-redux";
 import * as api from '../../services/api';
 import { GetQuestions, IQuestionItem, IQuestionsState } from "../../store/modules/questions/types";
@@ -18,6 +19,13 @@ const Questions: React.FC = () => {
     return (
         <Container>
             <Text>CATALOGO</Text>
+            {questions.map((question, key) => (
+                <View key={key}>
+                    <Text>{question.question} </Text>
+                    <Text>{question.category} </Text>
+                    <Text>{question.type} </Text>
+                </View>
+            ))}
         </Container>
     );
 };
