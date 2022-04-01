@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import Questions from "../../components/Questions/Catalog";
 import {
     Container,
     Text
@@ -6,10 +8,9 @@ import {
 
 const Home: React.FC = () => {
 
-
     return (
         <Container>
-            <Text>ola</Text>
+            <Questions/>
         </Container>
     );
 };
