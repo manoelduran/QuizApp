@@ -3,16 +3,6 @@ import styled, { css } from "styled-components/native";
 interface ContainerProps {
     index: number;
 };
-
-export const Container = styled.View`
-flex: 1;
-align-items:center ;
-justify-content:center ;
-`;
-export const Title = styled.Text``;
-
-export const QuestionsContainer = styled.View``;
-
 export const QuestionContainer = styled.TouchableOpacity.attrs<ContainerProps>(() => ({
     activeOpacity: 0.8,
 })) <ContainerProps>`

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import QuestionCard from "../../components/QuestionCard/QuestionCard";
+import { Alert, FlatList } from "react-native";
+import QuestionCard from "../../components/QuestionCard";
 import * as api from '../../services/api';
 import {
     Container,
@@ -9,16 +9,35 @@ import {
 
 const Home: React.FC = () => {
     const [questions, setQuestions] = useState<IQuestionItem[]>([]);
-    useEffect(() => {
+    const handleQuestion = (item: IQuestionItem) => {
+
+    };
+    const handleQuestions = () => {
         api.getQuestions()
             .then(response => {
                 console.log(response);
                 setQuestions(response);
             })
-    }, [])
+            .catch(() => {
+                Alert.alert("Error", "Erro ao tentar buscar questões")
+            })
+    }
+    useEffect(() => {
+        handleQuestions();
+    }, []);
     return (
         <Container>
-            <QuestionCard/>
+            <FlatList
+                data={questions}
+                keyExtractor={item => item.question}
+                renderItem={({ item, index }) => (
+                    <QuestionCard
+                        index={index}
+                        data={item}
+                        onPress={() => handleQuestion(item)}
+                    />
+                )}
+            />
         </Container>
     );
 };

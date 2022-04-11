@@ -5,6 +5,10 @@ export const api = axios.create({
 })
 
 export const getQuestions = async  ()  =>  {
-    const response = await api.get<GetQuestions>('api.php?amount=1&category=18&difficulty=easy&type=multiple')
+    const response = await api.get<GetQuestions>('api.php?amount=10&category=18&difficulty=easy&type=multiple')
 return response.data.results;
 };
+
+// https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple
+
+// https://opentdb.com/api.php?amount=10&category=18&difficulty=hard&type=multiple

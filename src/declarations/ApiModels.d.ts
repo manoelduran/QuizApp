@@ -7,10 +7,6 @@
     incorrect_answers: string[];
 };
 
- interface IQuestionsState {
-    items: IQuestionItem[];
-};
-
  interface GetQuestions {
     response_code: number;
     results: IQuestionItem[]
