@@ -1,17 +1,17 @@
-export interface IQuestionItem {
+ interface IQuestionItem {
     category: string,
     type: string,
     difficulty: string,
     question: string,
     correct_answer: string,
-    incorrect_answers: [];
+    incorrect_answers: string[];
 };
 
-export interface IQuestionsState {
+ interface IQuestionsState {
     items: IQuestionItem[];
 };
 
-export interface GetQuestions {
+ interface GetQuestions {
     response_code: number;
     results: IQuestionItem[]
 }

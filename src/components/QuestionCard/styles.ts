@@ -11,6 +11,8 @@ justify-content:center ;
 `;
 export const Title = styled.Text``;
 
+export const QuestionsContainer = styled.View``;
+
 export const QuestionContainer = styled.TouchableOpacity.attrs<ContainerProps>(() => ({
     activeOpacity: 0.8,
 })) <ContainerProps>`
@@ -36,6 +38,14 @@ margin-top: 11px;
 ${({ theme }) => css`
 font-family: ${theme.FONTS.TEXT};
 color: ${theme.COLORS.SECONDARY_400};
+`}
+`;
+
+export const Answer = styled.Text`
+font-size: 15px;
+${({ theme }) => css`
+font-family: ${theme.FONTS.TITLE};
+color: ${theme.COLORS.SECONDARY_900};
 `}
 `;
 

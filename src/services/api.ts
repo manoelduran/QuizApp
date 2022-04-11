@@ -1,5 +1,4 @@
 import axios from "axios";
-import { GetQuestions } from "../store/modules/questions/types";
 
 export const api = axios.create({
     baseURL: 'https://opentdb.com/',
