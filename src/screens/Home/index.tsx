@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Questions from "../../components/Questions/Catalog";
+import Questions from "../../components/Questions/Questions";
 import {
     Container,
     Text
@@ -10,7 +10,7 @@ const Home: React.FC = () => {
 
     return (
         <Container>
-            <Questions/>
+            <Questions />
         </Container>
     );
 };
